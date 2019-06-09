@@ -7,6 +7,8 @@ Rails.application.routes.draw do
         put :rate, on: :member
         get :top, on: :collection
       end
+
+      get '/user_ips/groups', to: 'user_ips#groups'
     end
   end
 end
