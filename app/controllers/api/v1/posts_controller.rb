@@ -1,5 +1,6 @@
 class Api::V1::PostsController < Api::V1::BaseController
   before_action :load_post, only: :rate
+
   def create
     form = PostForm.new(ip: request.remote_ip, **post_params)
 
@@ -18,6 +19,11 @@ class Api::V1::PostsController < Api::V1::BaseController
     else
       render_errors(result.response)
     end
+  end
+
+  def top
+    @posts = Post.top(params[:count].to_i)
+    render_success(@posts.to_a)
   end
 
   private

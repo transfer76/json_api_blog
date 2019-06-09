@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :posts, only: %i[create] do
         put :rate, on: :member
+        get :top, on: :collection
       end
     end
   end

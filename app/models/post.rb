@@ -2,6 +2,8 @@ class Post < ApplicationRecord
   belongs_to :user_ip
   belongs_to :user
 
+  scope :top, -> (count) { order(rating: :desc).limit(count) }
+
   def rate!(new_rate)
     with_lock do
       new_count = rate_count + 1
