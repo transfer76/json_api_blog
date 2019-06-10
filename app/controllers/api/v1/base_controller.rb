@@ -15,7 +15,7 @@ class Api::V1::BaseController < ApplicationController
     {
       success: success,
       data: data,
-      errors: errors,
+      errors: errors
     }
   end
 end

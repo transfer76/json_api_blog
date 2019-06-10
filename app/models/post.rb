@@ -4,6 +4,10 @@ class Post < ApplicationRecord
 
   scope :top, -> (count) { order(rating: :desc).limit(count) }
 
+  def rating
+    super.round(3)
+  end
+  
   def rate!(new_rate)
     with_lock do
       new_count = rate_count + 1
