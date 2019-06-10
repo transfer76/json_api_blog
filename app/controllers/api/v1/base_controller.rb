@@ -9,6 +9,10 @@ class Api::V1::BaseController < ApplicationController
     render json: result_json(false, [], errors), status: 422
   end
 
+  rescue_from ActiveRecord::RecordNotFound do |e|
+    render json: result_json(false, [], [e.message]), status: 404
+  end
+
   private
 
   def result_json(success, data, errors)
