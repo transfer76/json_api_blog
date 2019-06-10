@@ -1,0 +1,41 @@
+{
+  "resource": "Post",
+  "resource_explanation": "Posts resource",
+  "http_method": "GET",
+  "route": "/api/v1/posts/top",
+  "description": "Top rated posts",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "type": "integer",
+      "name": "count",
+      "description": "Top %{count} posts"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/posts/top?count=2",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+        "count": "2"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"success\": true,\n  \"data\": [\n    {\n      \"id\": 81,\n      \"title\": \"Magni hic repudiandae voluptatem.\",\n      \"body\": \"Ut accusantium nam. Doloremque eum quos. Qui pariatur eum.\\nSed est incidunt. Numquam ipsum fugiat. Ea nemo ab.\\nDolorem ratione quaerat. Excepturi harum ut. Pariatur sint autem.\\nDolores excepturi architecto. Harum dignissimos natus. Quo nemo officiis.\\nItaque officia natus. Porro temporibus fugiat. Ab libero rerum.\",\n      \"rating\": 4.99,\n      \"username\": \"caron\",\n      \"ip\": \"124.149.121.29\"\n    },\n    {\n      \"id\": 82,\n      \"title\": \"Repellat maiores numquam laudantium.\",\n      \"body\": \"Tenetur aliquid eveniet. Alias occaecati ut. Sequi quis quo.\\nArchitecto maiores odio. Doloremque error assumenda. Sed nemo laboriosam.\\nQuam quis quasi. Nulla qui quia. Nulla accusamus rerum.\\nSimilique ea a. Cum explicabo cupiditate. Voluptatum qui nemo.\\nEt facilis id. Quia est odio. Perspiciatis iure consequatur.\",\n      \"rating\": 4.95,\n      \"username\": \"guadalupe\",\n      \"ip\": \"241.179.105.108\"\n    }\n  ],\n  \"errors\": [\n\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

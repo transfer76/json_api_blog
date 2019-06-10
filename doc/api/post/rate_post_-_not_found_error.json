@@ -1,0 +1,40 @@
+{
+  "resource": "Post",
+  "resource_explanation": "Posts resource",
+  "http_method": "PUT",
+  "route": "/api/v1/posts/:id/rate",
+  "description": "Rate post - not found error",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "type": "integer",
+      "name": "rate",
+      "description": "Rate for post, 1 to 5"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/api/v1/posts/xxx/rate",
+      "request_body": "{\"rate\":5}",
+      "request_headers": {
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 404,
+      "response_status_text": "Not Found",
+      "response_body": "{\n  \"success\": false,\n  \"data\": [\n\n  ],\n  \"errors\": [\n    \"Couldn't find Post with 'id'=xxx\"\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

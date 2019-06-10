@@ -1,0 +1,65 @@
+{
+  "resources": [
+    {
+      "name": "Post",
+      "explanation": "Posts resource",
+      "examples": [
+        {
+          "description": "Create post",
+          "link": "post/create_post.json",
+          "groups": "all",
+          "route": "/api/v1/posts",
+          "method": "post"
+        },
+        {
+          "description": "Create post - validation errors",
+          "link": "post/create_post_-_validation_errors.json",
+          "groups": "all",
+          "route": "/api/v1/posts",
+          "method": "post"
+        },
+        {
+          "description": "Rate post",
+          "link": "post/rate_post.json",
+          "groups": "all",
+          "route": "/api/v1/posts/:id/rate",
+          "method": "put"
+        },
+        {
+          "description": "Rate post - not found error",
+          "link": "post/rate_post_-_not_found_error.json",
+          "groups": "all",
+          "route": "/api/v1/posts/:id/rate",
+          "method": "put"
+        },
+        {
+          "description": "Rate post - validation errors",
+          "link": "post/rate_post_-_validation_errors.json",
+          "groups": "all",
+          "route": "/api/v1/posts/:id/rate",
+          "method": "put"
+        },
+        {
+          "description": "Top rated posts",
+          "link": "post/top_rated_posts.json",
+          "groups": "all",
+          "route": "/api/v1/posts/top",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "User_Ips",
+      "explanation": "UserIps resource",
+      "examples": [
+        {
+          "description": "Shared IPs",
+          "link": "user_ips/shared_ips.json",
+          "groups": "all",
+          "route": "/api/v1/user_ips/groups",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

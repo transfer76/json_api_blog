@@ -1,0 +1,40 @@
+{
+  "resource": "Post",
+  "resource_explanation": "Posts resource",
+  "http_method": "PUT",
+  "route": "/api/v1/posts/:id/rate",
+  "description": "Rate post - validation errors",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "type": "integer",
+      "name": "rate",
+      "description": "Rate for post, 1 to 5"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/api/v1/posts/78/rate",
+      "request_body": "{\"rate\":6}",
+      "request_headers": {
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"success\": false,\n  \"data\": [\n\n  ],\n  \"errors\": [\n    \"Rate must be less than or equal to 5\"\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "resource": "User_Ips",
+  "resource_explanation": "UserIps resource",
+  "http_method": "GET",
+  "route": "/api/v1/user_ips/groups",
+  "description": "Shared IPs",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/user_ips/groups",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"success\": true,\n  \"data\": [\n    {\n      \"ip\": \"10.123.231.19\",\n      \"users\": [\n        \"John\",\n        \"Bill\"\n      ]\n    },\n    {\n      \"ip\": \"10.123.231.20\",\n      \"users\": [\n        \"Bill\",\n        \"Sam\"\n      ]\n    }\n  ],\n  \"errors\": [\n\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
