@@ -82,3 +82,11 @@ $ bundle exec rails s
 ```
 $ bundle exec rspec
 ```
+* Generate the docs
+```  
+$ rake docs:generate
+```
+* Open the docs
+```
+$ open doc/api/index.html
+```
