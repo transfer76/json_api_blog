@@ -10,6 +10,7 @@ gem 'reform-rails'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'polist'
 gem 'rspec_api_documentation'
+gem 'raddocs'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
